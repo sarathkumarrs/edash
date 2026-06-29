@@ -1,0 +1,21 @@
+{% extends 'root_email_template_new.html' %}
+
+{% block preheader %}A new organization is awaiting your approval{% endblock preheader %}
+
+{% block heading %}New organization pending approval{% endblock heading %}
+
+{% block content_body %}
+<p style="margin:0 0 8px 0;">A new organization has been created and is waiting for superadmin approval.</p>
+<p style="margin:0 0 8px 0;"><strong>Organization:</strong> {{ org_name }}</p>
+{% if creator_email %}<p style="margin:0 0 8px 0;"><strong>Created by:</strong> {{ creator_name }} ({{ creator_email }})</p>{% endif %}
+<p style="margin:0 0 8px 0;">Review it in the admin panel to approve or reject.</p>
+{% endblock content_body %}
+
+{% block button_link %}
+{% if admin_url %}
+<a class="btn-link" href="{{ admin_url }}"
+   style="display:inline-block;padding:14px 32px;background-color:#EA580C;color:#ffffff;text-decoration:none;border-radius:6px;font-size:16px;font-weight:600;line-height:1;">
+  Review organizations
+</a>
+{% endif %}
+{% endblock button_link %}

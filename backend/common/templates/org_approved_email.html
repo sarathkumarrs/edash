@@ -1,0 +1,19 @@
+{% extends 'root_email_template_new.html' %}
+
+{% block preheader %}Your organization has been approved{% endblock preheader %}
+
+{% block heading %}Organization approved{% endblock heading %}
+
+{% block content_body %}
+<p style="margin:0 0 8px 0;">Good news — your organization <strong>{{ org_name }}</strong> has been approved by a superadmin.</p>
+<p style="margin:0 0 8px 0;">You can now sign in and start using it.</p>
+{% endblock content_body %}
+
+{% block button_link %}
+{% if url %}
+<a class="btn-link" href="{{ url }}"
+   style="display:inline-block;padding:14px 32px;background-color:#EA580C;color:#ffffff;text-decoration:none;border-radius:6px;font-size:16px;font-weight:600;line-height:1;">
+  Open EdashCRM
+</a>
+{% endif %}
+{% endblock button_link %}

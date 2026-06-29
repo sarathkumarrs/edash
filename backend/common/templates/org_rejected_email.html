@@ -1,0 +1,11 @@
+{% extends 'root_email_template_new.html' %}
+
+{% block preheader %}Update on your organization request{% endblock preheader %}
+
+{% block heading %}Organization not approved{% endblock heading %}
+
+{% block content_body %}
+<p style="margin:0 0 8px 0;">We're sorry — your organization <strong>{{ org_name }}</strong> was not approved.</p>
+{% if reason %}<p style="margin:0 0 8px 0;"><strong>Reason:</strong> {{ reason }}</p>{% endif %}
+<p style="margin:0 0 8px 0;">If you believe this is a mistake, please reply to this email or contact support.</p>
+{% endblock content_body %}

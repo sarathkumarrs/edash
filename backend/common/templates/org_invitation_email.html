@@ -1,0 +1,19 @@
+{% extends 'root_email_template_new.html' %}
+
+{% block preheader %}You've been invited to join {{ org_name }} on EdashCRM{% endblock preheader %}
+
+{% block heading %}You're invited to {{ org_name }}{% endblock heading %}
+
+{% block content_body %}
+<p style="margin:0 0 8px 0;">{% if inviter %}<strong>{{ inviter }}</strong> has invited you{% else %}You've been invited{% endif %} to join <strong>{{ org_name }}</strong> on EdashCRM.</p>
+<p style="margin:0 0 8px 0;">Click the button below to sign in and get started. This link is valid for 7 days.</p>
+{% endblock content_body %}
+
+{% block button_link %}
+{% if join_url %}
+<a class="btn-link" href="{{ join_url }}"
+   style="display:inline-block;padding:14px 32px;background-color:#EA580C;color:#ffffff;text-decoration:none;border-radius:6px;font-size:16px;font-weight:600;line-height:1;">
+  Join {{ org_name }}
+</a>
+{% endif %}
+{% endblock button_link %}
