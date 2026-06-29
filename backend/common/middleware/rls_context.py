@@ -115,7 +115,7 @@ class RequireOrgContext:
         "/api/auth/magic-link/verify/",
         "/api/auth/magic-link/verify-code/",
         "/api/org/",
-        "/admin/",
+        "/django-admin/",
         "/swagger-ui/",
         "/api/schema/",
         # Public CSAT survey link (Tier 2 csat) — anonymous, sets RLS

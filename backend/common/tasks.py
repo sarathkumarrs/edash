@@ -135,7 +135,7 @@ def notify_superadmin_new_org(org_id, creator_user_id):
         "org_name": org.name,
         "creator_email": creator.email if creator else "",
         "creator_name": (creator.name if creator else "") or "",
-        "admin_url": f"{getattr(settings, 'BACKEND_URL', '')}/admin/common/org/",
+        "admin_url": f"{getattr(settings, 'BACKEND_URL', '')}/django-admin/common/org/",
     }
     _send_html_email(
         f"[Action needed] New organization pending approval: {org.name}",

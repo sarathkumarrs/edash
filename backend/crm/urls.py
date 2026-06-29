@@ -24,7 +24,7 @@ urlpatterns = [
     path(
         "logout/", views.LogoutView.as_view(), {"next_page": "/login/"}, name="logout"
     ),
-    path("admin/", admin.site.urls),
+    path("django-admin/", admin.site.urls),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     # Optional UI:
     path(
