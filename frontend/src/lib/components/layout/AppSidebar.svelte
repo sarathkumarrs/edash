@@ -1055,6 +1055,7 @@
   <Sidebar.Footer class="border-t border-[color:var(--sidebar-border)] px-2 py-2">
     <Sidebar.Menu class="space-y-px">
       <!-- Download mobile app -->
+      {#if false}
       <Sidebar.MenuItem>
         <Sidebar.MenuButton
           tooltipContent="Download mobile app"
@@ -1086,6 +1087,7 @@
           {/snippet}
         </Sidebar.MenuButton>
       </Sidebar.MenuItem>
+      {/if}
 
       <!-- Collapse/Expand Toggle -->
       <Sidebar.MenuItem>
